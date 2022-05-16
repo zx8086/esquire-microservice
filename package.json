@@ -1,0 +1,19 @@
+{
+  "name": "esquire-microservice",
+  "version": "1.0.0",
+  "description": "Micro-service for Esquire - Kafka Enablement",
+  "main": "esquire-service.js",
+  "scripts": {
+    "test": "echo \\\\\\\"Error: no test specified\\\\\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zx8086/esquire-microservice.git"
+  },
+  "author": "Simon Owusu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zx8086/esquire-microservice/issues"
+  },
+  "homepage": "https://github.com/zx8086/esquire-microservice#readme"
+}
