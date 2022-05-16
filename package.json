@@ -1,9 +1,10 @@
 {
   "name": "esquire-microservice",
   "version": "1.0.0",
-  "description": "Micro-service for Esquire - Kafka Enablement",
+  "description": "Micro-service for Esquire - OpenTelemetry Enablement Demo",
   "main": "esquire-service.js",
   "scripts": {
+    "start": "node -r ./tracing-esquire.js esquire-service.js",
     "test": "echo \\\\\\\"Error: no test specified\\\\\\\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/zx8086/esquire-microservice/issues"
   },
-  "homepage": "https://github.com/zx8086/esquire-microservice#readme"
+  "homepage": "https://github.com/zx8086/esquire-microservice#readme",
+  "dependencies": {
+    "@opentelemetry/auto-instrumentations-node": "^0.28.0",
+    "@opentelemetry/core": "^1.2.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.28.0",
+    "@opentelemetry/instrumentation": "^0.28.0",
+    "@opentelemetry/instrumentation-router": "^0.27.1",
+    "@opentelemetry/resources": "^1.2.0",
+    "@opentelemetry/sdk-node": "^0.28.0",
+    "@opentelemetry/sdk-trace-base": "^1.2.0",
+    "@opentelemetry/sdk-trace-node": "^1.2.0",
+    "@opentelemetry/semantic-conventions": "^1.2.0",
+    "axios": "^0.27.2",
+    "opentelemetry-instrumentation-socket.io": "^0.27.1"
+  }
 }
