@@ -1,6 +1,8 @@
 // Require express and create an instance of it
 const express = require('express');
 const app = express();
+app.disable("x-powered-by");
+
 const axios = require('axios');
 
 const logger = require('./logger')
