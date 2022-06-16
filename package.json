@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/zx8086/esquire-microservice#readme",
   "dependencies": {
-    "@opentelemetry/auto-instrumentations-node": "^0.28.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.30.0",
     "@opentelemetry/core": "^1.2.0",
     "@opentelemetry/exporter-trace-otlp-grpc": "^0.28.0",
     "@opentelemetry/instrumentation": "^0.28.0",
