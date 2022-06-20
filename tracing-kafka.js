@@ -1,4 +1,4 @@
-/* tracing-esquire.js */
+/* tracing-kafka.js */
 'use strict';
 
 const opentelemetry = require("@opentelemetry/sdk-node");
@@ -18,7 +18,7 @@ const { SocketIoInstrumentation } = require('opentelemetry-instrumentation-socke
 const { registerInstrumentations } = require('@opentelemetry/instrumentation');
 
 const sdk = new opentelemetry.NodeSDK({
-  traceExporter: new opentelemetry.tracing.ConsoleSpanExporter(),
+  // traceExporter: new opentelemetry.tracing.ConsoleSpanExporter(),
   instrumentations: 
     [
       getNodeAutoInstrumentations(),
@@ -38,7 +38,7 @@ const provider = new NodeTracerProvider({
 const exporter = new OTLPTraceExporter();
 
 // Configure span processor to send spans to the exporter
-provider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
+// provider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
 provider.addSpanProcessor(new SimpleSpanProcessor(exporter));
 provider.register();
 
