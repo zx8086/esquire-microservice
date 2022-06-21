@@ -39,8 +39,8 @@ const sdk = new opentelemetry.NodeSDK({
 
 const provider = new NodeTracerProvider({
   resource: new Resource({
-        [SemanticResourceAttributes.SERVICE_NAME]: "esquire-microservice",
-        [SemanticResourceAttributes.DEPLOYMENT_ENVIRONMENT]: "Production"
+        [SemanticResourceAttributes.SERVICE_NAME]: process.env.SERVICE_NAME,
+        [SemanticResourceAttributes.DEPLOYMENT_ENVIRONMENT]: process.env.DEPLOYMENT_ENVIRONMENT
     }),
 });
 

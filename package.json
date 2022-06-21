@@ -36,6 +36,7 @@
     "@opentelemetry/semantic-conventions": "^1.2.0",
     "@uptrace/node": "^1.0.1",
     "axios": "^0.27.2",
+    "elastic-apm-node": "^3.36.0",
     "logger": "^0.0.1",
     "morgan": "^1.10.0",
     "morgan-json": "^1.1.0",
