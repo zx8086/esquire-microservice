@@ -1,6 +1,9 @@
 /* tracing-esquire.js */
 'use strict';
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 const opentelemetry = require("@opentelemetry/sdk-node");
 const { LogLevel } = require("@opentelemetry/core");
 const { Resource } = require('@opentelemetry/resources');
