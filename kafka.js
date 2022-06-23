@@ -9,9 +9,9 @@ const ssl = !!sasl;
 const kafka = new Kafka({
   clientId: process.env.CLIENT_ID,
   brokers: [process.env.KAFKA_BOOTSTRAP_SERVER],
-  ssl,
-  sasl,
-  logLevel: logLevel.INFO,
+  // ssl,
+  // sasl,
+  logLevel: logLevel.ERROR,
 });
 
 module.exports = kafka;
