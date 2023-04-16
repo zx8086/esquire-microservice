@@ -32,27 +32,6 @@ const kafkaInst = require("./kafka");
 
 // const consume = require("./consume");
 
-const consumer = kafkaInst.consumer({ groupId: process.env.GROUP_ID })
-consumer.connect();
-consumer.subscribe({
-  topic: process.env.TOPIC,
-  fromBeginning: true,
-}); 
-
-const consumeMessages = async () => {
-  await consumer.run({
-    eachMessage: async ({ topic, partition, message }) => {
-      console.log({
-        topic: topic,
-        partition: partition,
-        offset: message.offset,
-        key: message.key,
-        value: message.value.toString(),
-      })
-    },
-  });
- }
-
 app.use(httpLogger)
 
 app.get('/', function (_req, res) {
@@ -64,32 +43,10 @@ app.get('/', function (_req, res) {
 
 });
 
-app.get("/esquire", async (_req, res, next) => {
+app.get("/trace", async (_req, res, next) => {
     logger.debug('This is the "/esquire" route.')
     logger.info("Simon Owusu Esq ")
     res.status(200).send("Simon Owusu Esq :)");
-});
-
-app.get("/consume", async (_req, res) => {
-  logger.debug('This is the "/esquire" route.')
-  logger.info("Simon Owusu Esq ")
-  await consumeMessages().catch(async (error) => {
-    console.error(error);
-    try {
-      logger.debug("Console Error....");
-    } catch (e) {
-      console.error("Failed to gracefully disconnect consumer", e);
-      // await consumer.disconnect();
-    }
-    finally {
-      console.log(`All Tasks are Done`);
-      res.end("Consumed all Kafka messages...");
-      consumer.disconnect();
-      process.exit(1);
-    }
-  }
-  );
-  res.status(200).send("Simon Owusu Esq :)");
 });
 
 app.use(function(_req, res) {
@@ -98,6 +55,6 @@ app.use(function(_req, res) {
     res.status(404).send("Sorry, that route doesn't exist. Have a nice day :)");
 });
 
-app.listen(3002, function () {
-    console.log('Esquire Service is listening on port 3002.');
+app.listen(8072, function () {
+    console.log('Esquire Service is listening on port 8072.');
 });
