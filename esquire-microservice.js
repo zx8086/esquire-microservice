@@ -1,25 +1,8 @@
 // Require express and create an instance of it
 // const instrument = require('@aspecto/opentelemetry');
-// instrument({aspectoAuth: '1cbb856b-0558-4e75-876f-3aee212f65c7'});
 
 const dotenv = require("dotenv");
 dotenv.config();
-
-// // Add this to the VERY top of the first file loaded in your app
-// var apm = require('elastic-apm-node').start({
-//   // Override service name from package.json
-//   // Allowed characters: a-z, A-Z, 0-9, -, _, and space
-//   serviceName:  process.env.SERVICE_NAME,
-
-//   // Use if APM Server requires a token
-//   secretToken:  process.env.ELASTIC_APM_TOKEN,
-
-//   // Set the service environment
-//   environment:  process.env.DEPLOYMENT_ENVIRONMENT, 
-
-//   // Set custom APM Server URL (default: http://localhost:8200)
-//   serverUrl: 'http://192.168.0.156:8200'
-// })
 
 const express = require('express');
 const app = express();
