@@ -38,3 +38,4 @@ COPY . .
 CMD [ "node", "-r", "./tracing-otel.js", "esquire-microservice.js" ]
 
 EXPOSE 8072
+
