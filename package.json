@@ -4,10 +4,8 @@
   "description": "Micro-service for Esquire - OpenTelemetry Enablement Demo",
   "main": "esquire-service.js",
   "scripts": {
-    "start": "node -r ./tracing-esquire.js esquire-microservice.js",
-    "kafka": "nodemon -r ./tracing-kafka.js esquire-microservice.js",
-    "tracer": "nodemon -r ./tracing-esquire.js esquire-microservice.js",
-    "aspecto": "nodemon -r ./tracing-aspecto.js esquire-microservice.js",
+    "start": "nodemon -r ./tracing-otel.js esquire-microservice.js",
+    "tracer": "nodemon -r ./tracing-otel.js esquire-microservice.js",
     "test": "echo 'Testing....' ",
     "linter": "standard --fix"
   },
