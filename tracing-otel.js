@@ -23,9 +23,8 @@ diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.DEBUG);
 // const consoleExporter = new ConsoleSpanExporter()
 
 const traceExporter = new OTLPTraceExporter(
-    {url: "https://otel-http.siobytes.com",}
-    // {url: "https://otel-grpc.siobytes.com",}
-    )
+  {url: "https://otel-http.siobytes.com",}
+  )
 
 const sdk = new opentelemetry.NodeSDK({
   resource: new Resource({
